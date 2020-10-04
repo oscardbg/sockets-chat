@@ -6,13 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src\\index.js",
-    "dev": "nodemon src\\index.js"
+    "dev": "nodemon src\\index.js",
+    "sassProd": "sass src\\public\\sass:src\\public\\css -s compressed",
+    "sassDev": "sass --watch src\\public\\sass:src\\public\\css -s compressed"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
   },
   "devDependencies": {
     "dotenv": "^8.2.0"

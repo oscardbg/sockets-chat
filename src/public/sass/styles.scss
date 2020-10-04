@@ -1,0 +1,51 @@
+/*■■■■■■■■■■■■■■■■■■■■■■■■ Declarations */
+
+$blue-1: #264653;
+$blue-2: #2a9d8f;
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■ Core */
+
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: Ubuntu, sans-serif;}
+body{background: #222; color: #fff; text-align: center;}
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■ Initial */
+
+.container{
+    max-width: 1000px; margin: 0 auto;
+}
+.title{text-align: center; padding: 20px 0;}
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■ Chat 1 */
+
+.chat{
+    width: 600px; margin: 0 auto; border: 2px solid $blue-1;
+
+    input, button{display: block; width: 100%; outline: none;}
+    
+    .chat-window{height: 300px; text-align: justify;}
+
+    .feedback{color: $blue-2; font-size: 0.6rem; padding: 5px 10px;}
+
+    .msg{
+        padding: 10px; border-bottom: 1px solid rgba(#fff, 0.1);
+        & > *{display: inline;}
+        span{font-size: 0.8rem; font-weight: bold; color: $blue-2;}
+    }
+    
+    input{
+        border: 1px solid $blue-1; padding: 10px;
+        &:focus{box-shadow: inset 0 0 4px rgba(#000, 0.8);}
+    }
+
+    button{
+        background: $blue-1; padding: 10px; color: #fff; text-transform: uppercase; font-weight: bold; border: none; cursor: pointer;
+        &:hover{background: rgba($blue-2, 0.8);}
+    }
+
+}
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■  */
+/*■■■■■■■■■■■■■■■■■■■■■■■■  */
+/*■■■■■■■■■■■■■■■■■■■■■■■■  */
+/*■■■■■■■■■■■■■■■■■■■■■■■■  */
+/*■■■■■■■■■■■■■■■■■■■■■■■■  */
