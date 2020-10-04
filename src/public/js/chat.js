@@ -23,6 +23,10 @@ btn.addEventListener('click', () => {
     msg.value = '';
 })
 
+msg.addEventListener('keypress', () => {
+    socket.emit('typing', handle.value);
+})
+
 /**
  * Listen for events
  */
@@ -39,5 +43,15 @@ socket.on('chat', (data) => {
     msg.appendChild(hdl);
     msg.appendChild(txt);
 
+    feedback.innerHTML = '';
     output.appendChild(msg);
+})
+
+socket.on('typing', (data) => {
+    //This create as much p tags as keys pressed, so not the brast approach
+    /* const msg = document.createElement('p');
+    msg.textContent = `${data} is typing a message...`;
+    feedback.appendChild(msg); */
+
+    feedback.innerHTML = `<p>${data} is typing a message</p>`;
 })

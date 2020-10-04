@@ -24,6 +24,8 @@ body{background: #222; color: #fff; text-align: center;}
     
     .chat-window{height: 300px; text-align: justify;}
 
+    .feedback{color: $blue-2; font-size: 0.6rem; padding: 5px 10px;}
+
     .msg{
         padding: 10px; border-bottom: 1px solid rgba(#fff, 0.1);
         & > *{display: inline;}
