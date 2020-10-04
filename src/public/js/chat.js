@@ -1,10 +1,11 @@
 /**
  * Dom elements
  */
-const outputs = document.querySelectorAll('.output');
-const handles = document.querySelectorAll('.handle');
-const msgs = document.querySelectorAll('.message');
-const btn1 = document.querySelector('button');
+const output = document.querySelector('.output');
+const handle = document.querySelector('.handle');
+const msg = document.querySelector('.message');
+const btn = document.querySelector('button');
+const feedback = document.querySelector('.feedback');
 
 /**
  * Make connection
@@ -14,10 +15,12 @@ const socket = io.connect('http://localhost:3000');
 /**
  * Events
  */
-btn1.addEventListener('click', () => {
+btn.addEventListener('click', () => {
     socket.emit('chat', { 
-        message: msgs[0].value, handle: handles[0].value
-     })
+        message: msg.value, handle: handle.value
+    })
+    handle.value = '';
+    msg.value = '';
 })
 
 /**
@@ -36,5 +39,5 @@ socket.on('chat', (data) => {
     msg.appendChild(hdl);
     msg.appendChild(txt);
 
-    outputs[0].appendChild(msg);
+    output.appendChild(msg);
 })

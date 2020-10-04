@@ -18,7 +18,7 @@ body{background: #222; color: #fff; text-align: center;}
 /*■■■■■■■■■■■■■■■■■■■■■■■■ Chat 1 */
 
 .chat{
-    display: inline-block; width: 45%; margin: 0 1%; border: 2px solid $blue-1;
+    width: 600px; margin: 0 auto; border: 2px solid $blue-1;
 
     input, button{display: block; width: 100%; outline: none;}
     
